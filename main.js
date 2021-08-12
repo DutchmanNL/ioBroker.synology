@@ -348,7 +348,7 @@ function parselistCameras(res){
     arr.forEach((k, i) => {
 
         if(arr[i].newName) arr[i].name = arr[i].newName // DSM 7
-        
+
         if (arr[i].name){
             if (states.SurveillanceStation.cameras[arr[i].name] === undefined){
                 states.SurveillanceStation.cameras[arr[i].name] = {};
@@ -1242,7 +1242,7 @@ function setObject(id, val){
             common.name = objects[_id].name;
             common.desc = objects[_id].name;
             common.role = objects[_id].role;
-            common.type = objects[_id].type;
+            common.type = typeof (val);
             if (objects[_id].unit !== undefined) common.unit = objects[_id].unit;
             if (objects[_id].min !== undefined) common.min = objects[_id].unit;
             if (objects[_id].max !== undefined) common.max = objects[_id].unit;
